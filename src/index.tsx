@@ -44,7 +44,7 @@ const Index = ({
 
   const findValBreakPoint = (): Array<number> => {
     let result: Array<number> = [];
-    breakPoint.forEach((val: string) => {
+    breakPoint?.forEach((val: string) => {
       result.push(valBreakPoint[val as keyof typeof valBreakPoint]);
     });
 
