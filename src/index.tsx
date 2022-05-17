@@ -85,7 +85,4 @@ const Index = ({
 
 
 // export default React.memo(Index);
-// export default Index;
-module.exports = {
-  Index
-}
+export default Index;
