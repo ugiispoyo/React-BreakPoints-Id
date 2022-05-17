@@ -64,7 +64,11 @@ const Index = ({
     let result: boolean = false;
     let indexVal = valArr.indexOf(arr[0]);
     if (arr.length === 2) {
-      result = display[0] <= arr[0] || display[0] >= arr[1];
+      if (breakPoint?.[1] === 'xxl') {
+        result = display[0] <= arr[0];
+      } else {
+        result = display[0] <= arr[0] || display[0] >= arr[1];
+      }
     } else {
       if (indexVal + 1 !== valArr.length) {
         result = display[0] <= arr[0] || display[0] >= valArr[indexVal + 1];
