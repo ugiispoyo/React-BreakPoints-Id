@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 interface Props {
   children: React.ReactNode;
-  breakPoint: Array<Required<"xs" | "sm" | "md" | "lg" | "xl" | "xxl">>;
+  breakPoint: Array<Required<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'>>;
   valBreakPoint?: {
     xs: number;
     sm: number;
@@ -37,9 +37,9 @@ const Index = ({
   };
 
   React.useEffect(() => {
-    window.addEventListener("resize", updateSize);
+    window.addEventListener('resize', updateSize);
     updateSize();
-    return () => window.removeEventListener("resize", updateSize);
+    return () => window.removeEventListener('resize', updateSize);
   }, []);
 
   const checkTypeBreakPoints = (): boolean => {
@@ -47,7 +47,7 @@ const Index = ({
     if (Array.isArray(breakPoint)) {
       if (breakPoint?.length <= 2) {
         breakPoint?.forEach(function (item: string) {
-          if (typeof item !== "string") {
+          if (typeof item !== 'string') {
             trueType = false;
           }
         });
@@ -65,19 +65,19 @@ const Index = ({
       if (checkTypeBreakPoints()) {
         // Check type value of props valBreakPoint
         if (
-          typeof oriPropsValBreakPoint !== "object" ||
+          typeof oriPropsValBreakPoint !== 'object' ||
           oriPropsValBreakPoint === null ||
           Array.isArray(oriPropsValBreakPoint)
         ) {
-          throw "false type valBreakPoint";
+          throw 'false type valBreakPoint';
         }
 
         Object.entries(valBreakPoint).forEach(([key, value]) => {
           if (
             !Object.keys(defaultBreakPoint).includes(key) ||
-            typeof value !== "number"
+            typeof value !== 'number'
           ) {
-            throw "false type valBreakPoint";
+            throw 'false type valBreakPoint';
           }
         });
 
@@ -86,37 +86,39 @@ const Index = ({
           // Check value of props valBreakPoint
           if (i > 0) {
             if (val === breakPoint[0] || a <= valBreakPoint[breakPoint[0]]) {
-              throw "false value breakPoint";
+              throw 'false value breakPoint';
             }
-            if (!Object.keys(valBreakPoint).includes(val)) {
-              throw "not match value breakPoint";
-            }
+          }
+          if (!Object.keys(valBreakPoint).includes(val)) {
+            throw 'not match value breakPoint';
           }
           result.push(a);
         });
 
         return result;
       } else {
-        throw "false type breakPoint";
+        throw 'false type breakPoint';
       }
     } catch (e: any) {
-      if (e === "false type valBreakPoint") {
+      if (e === 'false type valBreakPoint') {
         console.error(
           `The value (${JSON.stringify(
             oriPropsValBreakPoint
           )}) of props given by valBreakPoint does not match!`
         );
         return result;
-      } else if (e === "false value breakPoint") {
+      } else if (e === 'false value breakPoint') {
         console.error(
-          "The value of the breakpoint array cannot be the same or the value of the last index of the breakpoint array cannot be less than the first index!"
+          'The value of the breakpoint array cannot be the same or the value of the last index of the breakpoint array cannot be less than the first index!'
         );
         return [];
-      } else if (e === "not match value breakPoint") {
-        console.error("breakPoint value props do not match!");
+      } else if (e === 'not match value breakPoint') {
+        console.error(
+          'BreakPoint value props do not match! values only allow "xs", "sm", "md", "lg", "xl" or "xxl"'
+        );
         return [];
       } else {
-        console.error("Breakpoint type must be string array or max 2 length!");
+        console.error('Breakpoint type must be string array or max 2 length!');
         return result;
       }
     }
@@ -133,7 +135,7 @@ const Index = ({
     let result: boolean = false;
     let indexVal = valArr.indexOf(arr[0]);
     if (arr.length === 2) {
-      if (breakPoint?.[1] === "xxl") {
+      if (breakPoint?.[1] === 'xxl') {
         result = display[0] <= arr[0];
       } else {
         result = display[0] <= arr[0] || display[0] >= arr[1];
