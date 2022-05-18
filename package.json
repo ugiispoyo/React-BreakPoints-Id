@@ -26,8 +26,11 @@
     "url": "git+https://github.com/ugiispoyo/React-BreakPoints-Id.git"
   },
   "keywords": [
-    "Breackpoints",
-    "responsive"
+    "breackpoints",
+    "responsive breakpoints",
+    "react breakpoints",
+    "react breakpoints id",
+    "breakpoints layout"
   ],
   "author": "Ugi Ispoyo Widodo",
   "license": "MIT",

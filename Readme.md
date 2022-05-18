@@ -50,7 +50,8 @@ declare module 'react-breakpoints-id';
 ```
 
 <br/>
-<br/>
-<br/>
+<hr/>
 
-[Live Preview](https://stackblitz.com/edit/react-l7qco7?file=src/App.js)
+#### [Live Preview](https://stackblitz.com/edit/react-l7qco7?file=src/App.js)
+
+<br/>
