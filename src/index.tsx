@@ -4,12 +4,12 @@ interface Props {
   children: React.ReactNode;
   breakPoint: Array<Required<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'>>;
   valBreakPoint?: {
-    xs: number;
-    sm: number;
-    md: number;
-    lg: number;
-    xl: number;
-    xxl: number;
+    xs?: number;
+    sm?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+    xxl?: number;
   };
 }
 
@@ -82,10 +82,11 @@ const Index = ({
         });
 
         breakPoint?.forEach((val: string, i: number) => {
-          let a = valBreakPoint[val as keyof typeof valBreakPoint];
+          let a = valBreakPoint?.[val as keyof typeof valBreakPoint]!;
+          let b = valBreakPoint?.[breakPoint[0]]!
           // Check value of props valBreakPoint
           if (i > 0) {
-            if (val === breakPoint[0] || a <= valBreakPoint[breakPoint[0]]) {
+            if (val === breakPoint[0] || a <= b) {
               throw 'false value breakPoint';
             }
           }
