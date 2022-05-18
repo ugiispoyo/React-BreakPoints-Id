@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 interface Props {
     children: React.ReactNode;
-    breakPoint: Array<Required<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'>>;
+    breakPoint: Array<Required<"xs" | "sm" | "md" | "lg" | "xl" | "xxl">>;
     valBreakPoint?: {
         xs: number;
         sm: number;
