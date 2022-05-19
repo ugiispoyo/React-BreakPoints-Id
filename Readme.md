@@ -18,11 +18,11 @@ export default function App() {
   return (
     <React.Fragment>
       <BreakPoint breakPoint={['xs']}>
-        <p>Just XS</p>
+        <p>Only XS</p>
       </BreakPoint>
 
       <BreakPoint breakPoint={['xs', 'md']}>
-        <p>XS until MD</p>
+        <p>XS to MD</p>
       </BreakPoint>
 
       <BreakPoint valBreakPoint={{md: 500, lg: 700}} breakPoint={['xs', 'md']}>
