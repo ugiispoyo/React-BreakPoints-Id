@@ -1,6 +1,6 @@
 {
   "name": "react-breakpoints-id",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Breakpoints are customizable widths that determine how your responsive layout without render",
   "main": "dist/index.js",
   "module": "src/index.js",
