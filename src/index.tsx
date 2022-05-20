@@ -83,7 +83,7 @@ const Index = ({
 
         breakPoint?.forEach((val: string, i: number) => {
           let a = valBreakPoint?.[val as keyof typeof valBreakPoint]!;
-          let b = valBreakPoint?.[breakPoint[0]]!
+          let b = valBreakPoint?.[breakPoint[0]]!;
           // Check value of props valBreakPoint
           if (i > 0) {
             if (val === breakPoint[0] || a <= b) {
@@ -137,15 +137,15 @@ const Index = ({
     let indexVal = valArr.indexOf(arr[0]);
     if (arr.length === 2) {
       if (breakPoint?.[1] === 'xxl') {
-        result = display[0] <= arr[0];
+        result = display[0] < arr[0];
       } else {
-        result = display[0] <= arr[0] || display[0] >= arr[1];
+        result = display[0] < arr[0] || display[0] >= arr[1];
       }
     } else {
       if (indexVal + 1 !== valArr.length) {
-        result = display[0] <= arr[0] || display[0] >= valArr[indexVal + 1];
+        result = display[0] < arr[0] || display[0] >= valArr[indexVal + 1];
       } else {
-        result = display[0] <= arr[0];
+        result = display[0] < arr[0];
       }
     }
 
