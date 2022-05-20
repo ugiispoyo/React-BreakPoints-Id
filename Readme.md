@@ -42,7 +42,7 @@ No | Name | Type | Description | Default Value | Mandatory
 2  | breakPoint | To determine the break point layout to be used. Example: if you use ["xs"] it means that the inner component will render when the device is 0px to 575px, if you use ["md"] it means that the inner component will render when the device is 768px to 991px, if you use ["sm", "lg"] means the inner component will render when the device is 576px to 991px | Array<'xs', 'sm', 'md', 'lg', 'xl', 'xxl'> | - | true
 
 ## Break Points 
-Extra Small (xs) | Small (sm) | Medium (md) | Large (lg) | X-Large (xl) | XX-Large |
+Extra Small (xs) | Small (sm) | Medium (md) | Large (lg) | X-Large (xl) | XX-Large (xxl) |
 -- | -- | -- | -- | -- | --
 0px to 575px | 576px to 767px | 768px to 991px | 992px to 1199px | 1200px to 1399px | >= 1400px
 
