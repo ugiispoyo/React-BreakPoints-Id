@@ -43,6 +43,7 @@ No | Name | Type | Description | Default Value | Mandatory
 
 ## Break Points 
 Extra Small (xs) | Small (sm) | Medium (md) | Large (lg) | X-Large (xl) | XX-Large |
+-- | -- | -- | -- | -- | --
 0px to 575px | 576px to 767px | 768px to 991px | 992px to 1199px | 1200px to 1399px | >= 1400px
 
 ## Config For TypeScript
