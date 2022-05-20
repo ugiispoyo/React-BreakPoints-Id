@@ -7,6 +7,10 @@ Breakpoints are customizable widths that determine how your responsive layout wi
 ```bash
 npm i react-breakpoints-id
 ```
+**or**
+```bash
+yarn add react-breakpoints-id
+```
 
 ## Usage Example
 
